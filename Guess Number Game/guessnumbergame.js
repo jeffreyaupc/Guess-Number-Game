@@ -19,7 +19,7 @@ let enter = document.querySelector('.btn-enter')
 let clear = document.querySelector('.btn-clear')
 var max = document.querySelector('#max')
 var min = document.querySelector('#min')
-let display = document.querySelector('input')
+let display = document.querySelector('#display')
 
 //answer function
 function getRandomInt(max) {
@@ -53,12 +53,29 @@ buttons.forEach(function(button){
 enter.addEventListener('click', function(){
         
     if(enterNum.value == answer){
-        enterNum.style.background = 'green';
+        enterNum.style.background = 'rgb(0, 179, 24)';
+        enterNum.style.color = ' rgb(199, 199, 199)';
         alert('You won! Refresh page to play another one!');
+        document.getElementById("display").disabled = true;
+        document.getElementById("clr").disabled = true;
+        document.getElementById("etr").disabled = true; 
+        document.getElementById("1").disabled = true;
+        document.getElementById("2").disabled = true; 
+        document.getElementById("3").disabled = true; 
+        document.getElementById("4").disabled = true; 
+        document.getElementById("5").disabled = true; 
+        document.getElementById("6").disabled = true; 
+        document.getElementById("7").disabled = true; 
+        document.getElementById("8").disabled = true; 
+        document.getElementById("9").disabled = true; 
+        document.getElementById("0").disabled = true;         
     } else if(enterNum.value < answer){
         minNum.value = enterNum.value;
+        enterNum.value = "";
+
     } else if(enterNum.value > answer){
         maxNum.value = enterNum.value;
+        enterNum.value = "";        
     }
 });
 
