@@ -1,15 +1,17 @@
 //javascript random background color 
 const body = document.querySelector('body');
-const color1 = ['salmon', 'green', 'aqua', 'violet', 'hotpink', 'red', 'grey', 'darkblue', 'palegoldenrod', 'peru', 'slateblue'];
-const color2 = ['darkblue', 'palegoldenrod', 'peru', 'slateblue', 'salmon', 'green', 'aqua', 'violet', 'hotpink', 'red', 'grey'];
-
-var i = color1.index;
-var j = color2.index;
-i != j;
+const color1 = ['salmon', 'green', 'aqua', 'violet', 'hotpink', 'orchid', 'grey', 'darkblue', 'palegoldenrod', 'peru', 'slateblue', 'thistle', 'teal'];
+const color2 = ['salmon', 'green', 'aqua', 'violet', 'hotpink', 'orchid', 'grey', 'darkblue', 'palegoldenrod', 'peru', 'slateblue', 'thistle', 'teal'];
+const color3 = ['firebrick']
 
 const colorVar1 = parseInt(Math.random()*color1.length);
 const colorVar2 = parseInt(Math.random()*color2.length);
-body.style.background = 'linear-gradient(to left,' + color1[colorVar1] + ', ' + color2[colorVar2] + ')';
+
+if (color1[colorVar1] != color2[colorVar2]){
+    body.style.background = 'linear-gradient(to left,' + color1[colorVar1] + ', ' + color2[colorVar2] + ')';
+} else{
+    body.style.background = 'linear-gradient(to left,' + color1[colorVar1] + ', ' + color3[0] + ')';
+}
 
 
 //selectors
